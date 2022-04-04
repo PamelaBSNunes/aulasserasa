@@ -4,8 +4,8 @@ public class Conta {
 	// atributos
 	private int agencia;
 	private int numeroConta;
-	private double saldo;
-	private String titular;
+	protected double saldo;
+	private PessoaHeranca titular;
 
 	// construtor default (padrão)
 	public Conta() {
@@ -13,7 +13,7 @@ public class Conta {
 	}
 
 	// construtor com sobrecarga
-	public Conta(int agencia, int numeroConta, String titular) {
+	public Conta(int agencia, int numeroConta, PessoaHeranca titular) {
 		super();
 		this.agencia = agencia;
 		this.numeroConta = numeroConta;
@@ -68,12 +68,11 @@ public class Conta {
 		return saldo;
 	}
 
-
-	public String getTitular() {
+	public PessoaHeranca getTitular() {
 		return titular;
 	}
 
-	public void setTitular(String titular) {
+	public void setTitular(PessoaHeranca titular) {
 		this.titular = titular;
 	}
 
